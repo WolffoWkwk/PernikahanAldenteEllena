@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Undangan Pernikahan Ellena & Aldente — 19 September 2026">
+<title>Wedding Ellena &amp; Aldente — Wolffo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   1. VARIABLES — BLACK & GOLD ELEGANT
+   ============================================================ */
+:root{
+  --bg:        #0a0a0a;
+  --bg-2:      #0f0f0f;
+  --surface:   #151515;
+  --surface-2: #1c1c1c;
+
+  --ink:       #f4efe4;
+  --ink-soft:  #d9d2c4;
+  --muted:     #948b7c;
+
+  --gold:      #d4af37;
+  --gold-deep: #b8860b;
+  --gold-2:    #f0d98c;
+  --gold-3:    #8b6f2a;
+  --gold-line: rgba(212,175,55,.28);
+  --gold-line2:rgba(212,175,55,.5);
+
+  --shadow:    0 18px 45px -22px rgba(0,0,0,.95);
+
+  --radius:    18px;
+  --ff-head:   'Cormorant Garamond', Georgia, serif;
+  --ff-script: 'Great Vibes', cursive;
+  --ff-body:   'Jost', system-ui, -apple-system, sans-serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:20px;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  font-family:var(--ff-body);
+  font-weight:300;
+  color:var(--ink);
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(circle at 12% 4%,  rgba(212,175,55,.10), transparent 45%),
+    radial-gradient(circle at 88% 50%, rgba(212,175,55,.06), transparent 45%),
+    radial-gradient(circle at 40% 96%, rgba(212,175,55,.08), transparent 45%);
+  background-attachment:fixed;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+body.locked{ overflow:hidden; height:100vh; }
+
+img{ max-width:100%; display:block; }
+button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+a{ color:inherit; text-decoration:none; }
+
+::selection{ background:var(--gold); color:#0a0a0a; }
+
+/* ============================================================
+   2. TYPOGRAPHY
+   ============================================================ */
+.eyebrow{
+  font-size:.7rem;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:500;
+  margin:0 0 .9rem;
+}
+.section-title{
+  font-family:var(--ff-head);
+  font-size:clamp(1.9rem,7vw,2.9rem);
+  font-weight:600;
+  line-height:1.15;
+  margin:0 0 .35rem;
+  color:var(--ink);
+  letter-spacing:.02em;
+}
+.section-sub{
+  color:var(--muted);
+  font-size:.94rem;
+  max-width:34rem;
+  margin:0 auto;
+}
+
+/* ============================================================
+   GOLD TEXT
+   ============================================================ */
+.gold-text{
+  background:linear-gradient(180deg, #f4e4a8 0%, #d4af37 45%, #b8860b 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  display:inline-block;
+  padding:.18em .18em .22em;
+  line-height:1.32;
+  text-shadow:none;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)){
+  .gold-text{
+    color:var(--gold-2);
+    -webkit-text-fill-color:var(--gold-2);
+    background:none;
+  }
+}
+
+/* ============================================================
+   3. ORNAMENTS
+   ============================================================ */
+.ornament{
+  width:150px; height:auto; display:block;
+  margin:1.1rem auto 1.6rem;
+  color:var(--gold);
+  opacity:.9;
+}
+.ornament.small{ width:110px; margin:.8rem auto 1.2rem; }
+
+/* ============================================================
+   4. SCROLL PROGRESS
+   ============================================================ */
+.scroll-progress{
+  position:fixed;
+  top:0; left:0;
+  height:2px; width:0%;
+  background:linear-gradient(90deg, #8b6f2a, #d4af37, #f4e4a8);
+  z-index:2000;
+  box-shadow:0 0 14px rgba(212,175,55,.7);
+  transition:width .1s linear;
+  pointer-events:none;
+}
+
+/* ============================================================
+   5. COVER
+   ============================================================ */
+.cover{
+  position:fixed; inset:0; z-index:9999;
+  display:grid; place-items:center;
+  padding:2rem 1.4rem;
+  text-align:center;
+  color:var(--ink);
+  background:#080808;
+  overflow:hidden;
+}
+
+.cover-panel{
+  position:absolute;
+  left:0; width:100%; height:51%;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,.20), transparent 55%),
+    linear-gradient(160deg,#0b0b0b 0%, #161616 45%, #080808 100%);
+  transition:transform 1.2s cubic-bezier(.77,0,.18,1) .15s;
+  z-index:1;
+  pointer-events:none;
+  will-change:transform;
+  backface-visibility:hidden;
+}
+.cover-panel-top{ top:0; }
+.cover-panel-bottom{ bottom:0; }
+
+.cover-panel-top::after{
+  content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg, transparent 5%, var(--gold) 50%, transparent 95%);
+  box-shadow:0 0 12px rgba(212,175,55,.6);
+}
+.cover-panel-bottom::after{
+  content:''; position:absolute; top:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg, transparent 5%, var(--gold) 50%, transparent 95%);
+  box-shadow:0 0 12px rgba(212,175,55,.6);
+}
+
+.cover.hidden .cover-panel-top   { transform:translate3d(0,-100%,0); }
+.cover.hidden .cover-panel-bottom{ transform:translate3d(0, 100%,0); }
+
+.cover-particles{
+  position:absolute; inset:0;
+  z-index:2;
+  pointer-events:none;
+  overflow:hidden;
+  transition:opacity .6s ease;
+}
+.cover.hidden .cover-particles{ opacity:0; }
+
+.cover-particles i{
+  position:absolute;
+  bottom:-20px;
+  width:3px; height:3px;
+  border-radius:50%;
+  background:radial-gradient(circle, #f8ecc0, #d4af37);
+  box-shadow:0 0 10px rgba(212,175,55,.95);
+  opacity:0;
+  animation:floatUp linear infinite;
+}
+@keyframes floatUp{
+  0%   { transform:translateY(0) scale(.6); opacity:0; }
+  15%  { opacity:.9; }
+  85%  { opacity:.85; }
+  100% { transform:translateY(-115vh) scale(1.1); opacity:0; }
+}
+
+.cover-inner{
+  position:relative; z-index:3;
+  max-width:480px; width:100%;
+  transition:opacity .4s ease, transform .5s cubic-bezier(.22,.8,.3,1);
+  will-change:opacity, transform;
+}
+.cover.hidden .cover-inner{
+  opacity:0;
+  transform:scale(.96);
+  pointer-events:none;
+}
+
+.cover-frame{
+  border:1px solid var(--gold-line2);
+  border-radius:6px;
+  padding:2.8rem 1.6rem 2.4rem;
+  position:relative;
+  background:rgba(18,18,18,.6);
+  backdrop-filter:blur(6px);
+  box-shadow:var(--shadow), inset 0 0 60px rgba(212,175,55,.06);
+}
+.cover-frame::before,
+.cover-frame::after{
+  content:'';
+  position:absolute; width:18px; height:18px;
+  border:1px solid var(--gold);
+  filter:drop-shadow(0 0 6px rgba(212,175,55,.6));
+}
+.cover-frame::before{ top:-1px; left:-1px; border-right:0; border-bottom:0; }
+.cover-frame::after { bottom:-1px; right:-1px; border-left:0; border-top:0; }
+
+.cover-kicker{
+  font-size:.85rem; letter-spacing:.5em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 1rem; font-weight:500;
+}
+
+.cover-names{
+  font-family:var(--ff-script);
+  font-size:clamp(3rem,15vw,4.6rem);
+  line-height:1.35;
+  margin:0;
+  font-weight:400;
+  padding:.2em .15em .25em;
+}
+.cover-names .amp-gold{
+  background:none;
+  -webkit-text-fill-color:var(--gold-2);
+  color:var(--gold-2);
+  font-size:.6em;
+  display:inline-block;
+  margin:0 .12em;
+  padding:0 .05em;
+}
+
+.cover-date{
+  font-family:var(--ff-head);
+  letter-spacing:.24em;
+  font-size:clamp(1.05rem, 4vw, 1.35rem);
+  font-weight:600;
+  text-transform:uppercase;
+  color:var(--gold-2);
+  margin:1.1rem 0 0;
+  text-shadow:0 0 18px rgba(212,175,55,.35);
+}
+
+.cover-guest{
+  margin-top:2rem;
+  padding-top:1.8rem;
+  border-top:1px solid var(--gold-line);
+}
+.cover-guest p{
+  font-size:.78rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--muted); margin:0;
+}
+.cover-guest h2{
+  font-family:var(--ff-head);
+  font-size:clamp(1.5rem,6.5vw,2rem);
+  font-weight:600;
+  margin:.5rem 0 .4rem;
+  color:var(--ink);
+  letter-spacing:.02em;
+}
+.cover-note{
+  font-size:.7rem !important;
+  letter-spacing:.06em !important;
+  text-transform:none !important;
+  color:var(--muted) !important;
+  opacity:.8;
+}
+
+.btn-open{
+  position:relative;
+  margin-top:2rem;
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding:.95rem 2.3rem;
+  border-radius:100px;
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg, rgba(212,175,55,.28), rgba(184,134,11,.10));
+  color:var(--gold-2);
+  font-size:.78rem; letter-spacing:.24em; text-transform:uppercase; font-weight:500;
+  transition:.35s ease;
+}
+.btn-open::after{
+  content:'';
+  position:absolute; inset:-5px;
+  border-radius:100px;
+  border:1px solid var(--gold);
+  opacity:0;
+  animation:ripple 2.6s ease-out infinite;
+  pointer-events:none;
+}
+@keyframes ripple{
+  0%   { opacity:.55; transform:scale(1); }
+  100% { opacity:0;   transform:scale(1.32); }
+}
+.btn-open:hover{
+  background:linear-gradient(135deg, #d4af37, #f0d98c);
+  color:#0a0a0a; border-color:var(--gold-2);
+  transform:translateY(-2px);
+  box-shadow:0 14px 36px -10px rgba(212,175,55,.7), 0 0 30px rgba(212,175,55,.35);
+}
+.btn-open svg{ width:15px; height:15px; }
+
+.music-status{
+  display:block;
+  margin-top:.9rem;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  opacity:0;
+  transition:opacity .3s;
+}
+.music-status.show{ opacity:.85; }
+.music-status.ok{ color:var(--gold-2); }
+
+/* ============================================================
+   6. MAIN LAYOUT
+   ============================================================ */
+#main{
+  opacity:1;
+  position:relative;
+  z-index:1;
+}
+
+section{
+  padding:5rem 1.4rem;
+  position:relative;
+}
+.wrap{ max-width:640px; margin:0 auto; text-align:center; }
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .9s ease, transform .9s cubic-bezier(.22,.8,.3,1);
+}
+.reveal.in{ opacity:1; transform:none; }
+
+/* ============================================================
+   7. HERO
+   ============================================================ */
+.hero{
+  min-height:100svh;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  text-align:center;
+  padding:6rem 1.4rem 5rem;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,.22), transparent 55%),
+    radial-gradient(circle at 15% 92%, rgba(184,134,11,.14), transparent 52%),
+    linear-gradient(170deg,#0c0c0c 0%, #131313 55%, #080808 100%);
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:'';
+  position:absolute; inset:-20%;
+  background-image:
+    radial-gradient(circle at 30% 25%, rgba(212,175,55,.26) 0 1px, transparent 2px),
+    radial-gradient(circle at 75% 70%, rgba(212,175,55,.20) 0 1px, transparent 2px),
+    radial-gradient(circle at 55% 45%, rgba(212,175,55,.18) 0 1px, transparent 2px);
+  background-size:150px 150px, 220px 220px, 180px 180px;
+  pointer-events:none;
+  animation:drift 40s ease-in-out infinite;
+}
+@keyframes drift{
+  0%,100% { transform:translate(0,0) scale(1); }
+  50%     { transform:translate(24px,-32px) scale(1.04); }
+}
+.hero > *{ position:relative; z-index:2; }
+
+.hero-eyebrow, .hero-loc, .hero-names, .hero-date, .hero-line{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .9s ease, transform 1s cubic-bezier(.22,.8,.3,1);
+  will-change:opacity, transform;
+}
+#main.visible .hero-eyebrow{ opacity:1; transform:none; transition-delay:1.35s; }
+#main.visible .hero-loc    { opacity:1; transform:none; transition-delay:1.5s;  }
+#main.visible .hero-names  { opacity:1; transform:none; transition-delay:1.65s; }
+#main.visible .hero-date   { opacity:1; transform:none; transition-delay:1.9s;  }
+#main.visible .hero-line   { opacity:1; transform:none; transition-delay:2.1s;  }
+
+.hero-eyebrow{
+  font-size:clamp(.85rem, 3.2vw, 1.05rem);
+  letter-spacing:.45em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 .55rem;
+  font-weight:500;
+  text-shadow:0 0 14px rgba(212,175,55,.25);
+}
+
+.hero-loc{
+  font-family:var(--ff-head);
+  font-size:clamp(1.15rem, 4.4vw, 1.55rem);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin:0 0 2.6rem;
+  font-weight:500;
+}
+
+.hero-names{
+  font-family:var(--ff-script);
+  font-size:clamp(3.2rem,16vw,5.4rem);
+  line-height:1.35;
+  margin:0;
+  font-weight:400;
+  padding:.2em .15em .25em;
+}
+.hero-names .amp-gold{
+  display:block;
+  font-family:var(--ff-head);
+  font-size:.32em;
+  background:none;
+  -webkit-text-fill-color:var(--gold-2);
+  color:var(--gold-2);
+  margin:.1em 0;
+  letter-spacing:.1em;
+  padding:.05em 0;
+}
+
+.hero-date{
+  font-family:var(--ff-head);
+  font-size:clamp(1.5rem, 5.5vw, 2rem);
+  letter-spacing:.28em;
+  margin:1.6rem 0 0;
+  color:var(--gold-2);
+  font-weight:600;
+  text-shadow:0 0 22px rgba(212,175,55,.4);
+}
+.hero-line{
+  width:1px; height:70px; margin:2.6rem auto 0;
+  background:linear-gradient(to bottom, rgba(212,175,55,.85), transparent);
+  position:relative;
+}
+.hero-line::after{
+  content:'';
+  position:absolute; left:50%; bottom:-4px; transform:translateX(-50%);
+  width:7px; height:7px; border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 12px rgba(212,175,55,.9);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ transform:translateX(-50%) scale(1); opacity:1; }
+  50%    { transform:translateX(-50%) scale(1.9); opacity:.35; }
+}
+
+/* ============================================================
+   8. VERSE
+   ============================================================ */
+.quote{ background:transparent; }
+.quote-card{
+  max-width:640px; margin:0 auto;
+  background:linear-gradient(165deg, rgba(28,28,28,.9), rgba(16,16,16,.9));
+  border:1px solid var(--gold-line);
+  border-radius:var(--radius);
+  padding:2.6rem 1.8rem 2.5rem;
+  box-shadow:var(--shadow), inset 0 0 60px rgba(212,175,55,.04);
+  position:relative;
+}
+
+.quote-mark{
+  display:block;
+  width:44px;
+  height:auto;
+  margin:0 auto 1.6rem;
+  color:var(--gold);
+  filter:drop-shadow(0 0 10px rgba(212,175,55,.5));
+}
+
+.quote-text{
+  font-family:var(--ff-head);
+  font-size:1.1rem;
+  font-style:italic;
+  line-height:1.95;
+  color:var(--ink-soft);
+  margin:0 0 1.4rem;
+}
+.quote-source{
+  font-size:.74rem; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--gold); font-weight:500; margin:0;
+}
+
+/* ============================================================
+   9. COUPLE
+   ============================================================ */
+.couple-grid{
+  display:grid; gap:2.6rem;
+  max-width:760px; margin:0 auto;
+  justify-items:center;
+}
+@media(min-width:720px){ .couple-grid{ grid-template-columns:1fr auto 1fr; align-items:center; gap:1.6rem; } }
+
+.person{ text-align:center; max-width:280px; }
+.person-photo{
+  width:180px; height:180px; margin:0 auto 1.4rem;
+  border-radius:50%;
+  border:1px solid var(--gold-line2);
+  position:relative;
+  background:radial-gradient(circle at 40% 35%, #1c1c1c, #0d0d0d);
+  box-shadow:0 14px 34px -20px rgba(0,0,0,.9), 0 0 26px rgba(212,175,55,.12);
+}
+.person-photo::after{
+  content:'';
+  position:absolute; inset:-9px;
+  border-radius:50%;
+  border:1px dashed rgba(212,175,55,.4);
+  pointer-events:none;
+  animation:spinSlow 40s linear infinite;
+}
+@keyframes spinSlow{ to{ transform:rotate(360deg); } }
+
+.person-photo .ph-fallback,
+.person-photo img{
+  position:absolute;
+  top:7px; left:7px;
+  width:calc(100% - 14px);
+  height:calc(100% - 14px);
+  border-radius:50%;
+  object-fit:cover;
+}
+.person-photo .ph-fallback{
+  display:grid; place-items:center;
+  background:linear-gradient(150deg,#1e1e1e,#0f0f0f);
+  font-family:var(--ff-script);
+  font-size:3.4rem;
+  color:var(--gold-2);
+  text-shadow:0 0 22px rgba(212,175,55,.55);
+}
+.person-name{
+  font-family:var(--ff-head);
+  font-size:1.65rem; font-weight:600;
+  color:var(--ink); margin:0 0 .25rem;
+  line-height:1.3;
+}
+.person-role{
+  font-size:.68rem; letter-spacing:.34em; text-transform:uppercase;
+  color:var(--gold); margin:0; font-weight:500;
+}
+
+.amp{
+  font-family:var(--ff-script);
+  font-size:3.6rem;
+  background:none;
+  -webkit-text-fill-color:var(--gold-2);
+  color:var(--gold-2);
+  line-height:1;
+  text-shadow:0 0 26px rgba(212,175,55,.5);
+  padding:.1em;
+}
+
+/* ============================================================
+   10. COUNTDOWN
+   ============================================================ */
+.countdown-sec{
+  background:linear-gradient(165deg,#0e0e0e,#151515 50%,#090909);
+  border-top:1px solid var(--gold-line);
+  border-bottom:1px solid var(--gold-line);
+  position:relative;
+  overflow:hidden;
+}
+.countdown-sec::before{
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(circle at 50% 0%, rgba(212,175,55,.18), transparent 62%);
+  pointer-events:none;
+}
+.countdown-sec .wrap{ position:relative; z-index:2; }
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.7rem;
+  max-width:460px;
+  margin:2.2rem auto 0;
+}
+.cd-item{
+  background:linear-gradient(160deg, rgba(28,28,28,.9), rgba(14,14,14,.9));
+  border:1px solid var(--gold-line);
+  border-radius:14px;
+  padding:1.15rem .35rem .95rem;
+  transition:.35s;
+  box-shadow:inset 0 0 24px rgba(212,175,55,.05);
+}
+.cd-item:hover{
+  border-color:var(--gold);
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px -18px rgba(212,175,55,.5), inset 0 0 26px rgba(212,175,55,.10);
+}
+.cd-num{
+  display:block;
+  font-family:var(--ff-head);
+  font-size:clamp(1.6rem,7.5vw,2.5rem);
+  font-weight:700;
+  line-height:1;
+  color:var(--gold-2);
+  font-variant-numeric:tabular-nums;
+  text-shadow:0 0 18px rgba(212,175,55,.35);
+  transition:transform .3s ease, color .3s ease;
+}
+.cd-num.tick{ animation:tickPulse .45s ease; }
+@keyframes tickPulse{
+  0%  { transform:scale(1); }
+  40% { transform:scale(1.16); color:#f8ecc0; text-shadow:0 0 26px rgba(212,175,55,.95); }
+  100%{ transform:scale(1); }
+}
+.cd-label{
+  display:block;
+  font-size:.6rem; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--muted);
+  margin-top:.55rem;
+}
+.countdown-note{
+  margin-top:1.5rem;
+  font-size:.78rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); opacity:.9;
+}
+
+/* ============================================================
+   11. EVENTS
+   ============================================================ */
+.event-card{
+  max-width:520px;
+  margin:0 auto 1.6rem;
+  background:linear-gradient(165deg, rgba(26,26,26,.92), rgba(14,14,14,.92));
+  border:1px solid var(--gold-line);
+  border-radius:var(--radius);
+  padding:2.4rem 1.6rem 2rem;
+  box-shadow:var(--shadow), inset 0 0 50px rgba(212,175,55,.03);
+  position:relative;
+  overflow:hidden;
+  transition:.4s;
+}
+.event-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold-line2);
+  box-shadow:0 26px 55px -26px rgba(0,0,0,.95), 0 0 40px rgba(212,175,55,.18);
+}
+.event-card::before{
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold), var(--gold-2), var(--gold), transparent);
+  opacity:.9;
+}
+.event-icon{
+  width:56px; height:56px; margin:0 auto 1.1rem;
+  display:grid; place-items:center;
+  border-radius:50%;
+  background:linear-gradient(140deg, rgba(212,175,55,.22), rgba(184,134,11,.05));
+  border:1px solid var(--gold-line2);
+  color:var(--gold-2);
+  box-shadow:0 0 22px rgba(212,175,55,.18);
+}
+.event-icon svg{ width:24px; height:24px; }
+.event-name{
+  font-family:var(--ff-head);
+  font-size:1.8rem; font-weight:600;
+  color:var(--ink); margin:0 0 .1rem;
+}
+.event-type{
+  font-size:.66rem; letter-spacing:.36em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 1.5rem; font-weight:500;
+}
+.event-row{
+  display:flex; align-items:center; justify-content:center; gap:.55rem;
+  font-size:.95rem; color:var(--ink-soft);
+  margin:0 0 .55rem;
+}
+.event-row svg{ width:15px; height:15px; color:var(--gold); flex:none; }
+.event-row strong{ font-weight:500; color:var(--ink); }
+.event-place{
+  font-size:.9rem; color:var(--muted); line-height:1.85;
+  margin:.9rem auto 1.4rem; max-width:22rem;
+}
+.event-divider{
+  width:60px; height:1px; margin:1.2rem auto;
+  background:linear-gradient(90deg,transparent,var(--gold-line2),transparent);
+}
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.75rem 1.6rem;
+  border-radius:100px;
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg, #d4af37, #e6c463);
+  color:#0a0a0a;
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
+  transition:.35s;
+  box-shadow:0 8px 22px -12px rgba(212,175,55,.7);
+}
+.btn:hover{
+  background:transparent; color:var(--gold-2);
+  box-shadow:0 0 26px rgba(212,175,55,.35);
+}
+.btn svg{ width:14px; height:14px; }
+.btn.ghost{
+  background:transparent; color:var(--gold-2);
+  box-shadow:none;
+}
+.btn.ghost:hover{
+  background:linear-gradient(135deg, #d4af37, #f0d98c);
+  color:#0a0a0a;
+  box-shadow:0 12px 28px -12px rgba(212,175,55,.65);
+}
+
+/* ============================================================
+   12. LOVE STORY
+   ============================================================ */
+.story-list{
+  max-width:560px; margin:2.4rem auto 0;
+  position:relative;
+  text-align:left;
+}
+.story-list::before{
+  content:'';
+  position:absolute;
+  left:13px; top:8px; bottom:8px;
+  width:1px;
+  background:linear-gradient(to bottom, transparent, var(--gold-line2) 12%, var(--gold-line2) 88%, transparent);
+}
+.story-item{
+  position:relative;
+  padding:0 0 2.4rem 3.2rem;
+}
+.story-item:last-child{ padding-bottom:0; }
+.story-dot{
+  position:absolute; left:4px; top:5px;
+  width:20px; height:20px; border-radius:50%;
+  background:#0d0d0d;
+  border:1px solid var(--gold);
+  display:grid; place-items:center;
+  box-shadow:0 0 14px rgba(212,175,55,.4);
+}
+.story-dot::after{
+  content:'';
+  width:6px; height:6px; border-radius:50%;
+  background:var(--gold-2);
+  box-shadow:0 0 8px rgba(212,175,55,.9);
+}
+.story-title{
+  font-family:var(--ff-head);
+  font-size:1.35rem; font-weight:600;
+  color:var(--gold-2); margin:0 0 .4rem;
+  letter-spacing:.01em;
+}
+.story-text{
+  font-size:.9rem; color:var(--muted); line-height:1.95; margin:0;
+}
+
+/* ============================================================
+   13. GALLERY
+   ============================================================ */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.75rem;
+  max-width:640px;
+  margin:2.4rem auto 0;
+}
+@media(min-width:640px){
+  .gallery{ grid-template-columns:repeat(3,1fr); }
+  .gallery .g-item:nth-child(1){ grid-row:span 2; }
+}
+.g-item{
+  position:relative;
+  margin:0;
+  border-radius:14px;
+  overflow:hidden;
+  aspect-ratio:3/4;
+  border:1px solid var(--gold-line);
+  background:linear-gradient(150deg,#1a1a1a,#0d0d0d);
+  display:grid; place-items:center;
+  box-shadow:0 14px 34px -22px rgba(0,0,0,.95);
+  transition:.5s cubic-bezier(.22,.8,.3,1);
+}
+@media(min-width:640px){ .gallery .g-item:nth-child(1){ aspect-ratio:auto; } }
+.g-item img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.6s cubic-bezier(.22,.8,.3,1);
+}
+.g-item::after{
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.55), transparent 55%);
+  opacity:0;
+  transition:.5s;
+  pointer-events:none;
+}
+.g-item:hover{ transform:translateY(-4px); border-color:var(--gold); }
+.g-item:hover img{ transform:scale(1.06); }
+.g-item:hover::after{ opacity:1; }
+.g-item.empty span{
+  position:relative; z-index:2;
+  font-family:var(--ff-script);
+  font-size:2.2rem;
+  color:var(--gold-2);
+  opacity:.85;
+  text-shadow:0 0 20px rgba(212,175,55,.5);
+}
+
+/* ============================================================
+   14. FOOTER
+   ============================================================ */
+.footer{
+  text-align:center;
+  padding:4.5rem 1.4rem 8rem;
+  background:linear-gradient(180deg,#0e0e0e,#060606);
+  border-top:1px solid var(--gold-line);
+  color:var(--muted);
+}
+.footer-names{
+  font-family:var(--ff-script);
+  font-size:2.8rem;
+  margin:0 0 .6rem;
+  line-height:1.4;
+  font-weight:400;
+  padding:.15em .15em .2em;
+}
+.footer-thanks{
+  font-size:.78rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 1.6rem;
+}
+.footer-credit{
+  font-size:.68rem; letter-spacing:.14em;
+  color:rgba(148,139,124,.65);
+  margin:0;
+}
+
+/* ============================================================
+   15. BOTTOM NAV
+   ============================================================ */
+.nav{
+  position:fixed;
+  left:50%; bottom:14px;
+  transform:translate(-50%, 130%);
+  z-index:900;
+  display:flex;
+  gap:.15rem;
+  padding:.45rem .55rem;
+  border-radius:100px;
+  background:rgba(16,16,16,.92);
+  backdrop-filter:blur(14px);
+  border:1px solid var(--gold-line);
+  box-shadow:0 16px 40px -18px rgba(0,0,0,.95), 0 0 26px rgba(212,175,55,.12);
+  transition:transform .7s cubic-bezier(.22,.8,.3,1);
+  max-width:calc(100vw - 24px);
+}
+.nav.show{ transform:translate(-50%, 0); }
+.nav a{
+  display:flex; flex-direction:column; align-items:center; gap:.18rem;
+  padding:.5rem .68rem;
+  border-radius:100px;
+  color:var(--muted);
+  font-size:.52rem; letter-spacing:.1em; text-transform:uppercase;
+  transition:.3s;
+  white-space:nowrap;
+}
+.nav a svg{ width:17px; height:17px; stroke-width:1.6; }
+.nav a:hover, .nav a.active{
+  background:rgba(212,175,55,.16);
+  color:var(--gold-2);
+}
+
+/* ============================================================
+   16. MUSIC BUTTON
+   ============================================================ */
+.music-btn{
+  position:fixed;
+  right:16px; top:16px;
+  z-index:950;
+  width:46px; height:46px;
+  border-radius:50%;
+  display:grid; place-items:center;
+  background:rgba(16,16,16,.92);
+  border:1px solid var(--gold-line2);
+  color:var(--gold-2);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 26px -14px rgba(0,0,0,.9), 0 0 20px rgba(212,175,55,.16);
+  transition:.35s;
+  opacity:0; visibility:hidden;
+}
+.music-btn.show{ opacity:1; visibility:visible; }
+.music-btn:hover{
+  background:linear-gradient(135deg,#d4af37,#f0d98c);
+  color:#0a0a0a; border-color:var(--gold-2);
+  box-shadow:0 0 28px rgba(212,175,55,.55);
+}
+.music-btn svg{ width:18px; height:18px; }
+.music-btn .disc{ animation:spin 4s linear infinite; }
+.music-btn.paused .disc{ animation-play-state:paused; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+/* ============================================================
+   17. TOAST
+   ============================================================ */
+.toast{
+  position:fixed;
+  left:50%; bottom:96px;
+  transform:translate(-50%, 24px);
+  z-index:1000;
+  padding:.7rem 1.4rem;
+  border-radius:100px;
+  background:linear-gradient(135deg,#d4af37,#f0d98c);
+  color:#0a0a0a;
+  font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+  box-shadow:0 14px 34px -12px rgba(212,175,55,.7);
+  opacity:0; visibility:hidden;
+  transition:.4s cubic-bezier(.22,.8,.3,1);
+  text-align:center;
+  max-width:80vw;
+}
+.toast.show{ opacity:1; visibility:visible; transform:translate(-50%,0); }
+
+/* ============================================================
+   18. REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+  html{ scroll-behavior:auto; }
+  .hero::after, .cover-particles i{ animation:none; opacity:0; }
+  .btn-open::after{ animation:none; }
+  .cover-panel{ transition-duration:.01ms !important; }
+  .hero-eyebrow, .hero-loc, .hero-names, .hero-date, .hero-line{
+    opacity:1 !important; transform:none !important;
+  }
+}
+
+/* ============================================================
+   19. RESPONSIVE
+   ============================================================ */
+@media (max-width:400px){
+  .cover-names{ font-size:clamp(2.6rem,14vw,3.6rem); }
+  .hero-names { font-size:clamp(2.8rem,15vw,4.2rem); }
+  .footer-names{ font-size:2.2rem; }
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ==========================================================
+     COVER
+     ========================================================== -->
+<div class="cover" id="cover">
+
+  <div class="cover-panel cover-panel-top"></div>
+  <div class="cover-panel cover-panel-bottom"></div>
+  <div class="cover-particles" id="coverParticles" aria-hidden="true"></div>
+
+  <div class="cover-inner">
+    <div class="cover-frame">
+      <p class="cover-kicker">The Wedding Of</p>
+      <h1 class="cover-names gold-text">
+        Ellena <span class="amp-gold">&amp;</span> Aldente
+      </h1>
+      <p class="cover-date">19 &middot; 09 &middot; 2026</p>
+
+      <div class="cover-guest">
+        <p>Kepada Bapak / Ibu / Saudara / i</p>
+        <h2 id="guestName">Tamu Undangan</h2>
+        <p class="cover-note">Mohon maaf apabila ada kesalahan penulisan nama &amp; gelar</p>
+      </div>
+
+      <button class="btn-open" id="openBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>
+        </svg>
+        Buka Undangan
+      </button>
+
+      <span class="music-status" id="musicStatus"></span>
+    </div>
+  </div>
+</div>
+
+<!-- MUSIC TOGGLE -->
+<button class="music-btn" id="musicBtn" type="button" aria-label="Putar / hentikan musik">
+  <svg class="disc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/>
+  </svg>
+</button>
+
+<!-- AUDIO ELEMENT -->
+<audio id="bgm" loop preload="auto" playsinline></audio>
+
+<!-- ==========================================================
+     MAIN
+     ========================================================== -->
+<main id="main">
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero" id="home">
+    <p class="hero-eyebrow">Wedding Invitation</p>
+    <p class="hero-loc">Kota Taman Main Roleplay</p>
+
+    <h1 class="hero-names gold-text">
+      Ellena
+      <span class="amp-gold">&amp;</span>
+      Aldente
+    </h1>
+
+    <p class="hero-date">19 &middot; 09 &middot; 2026</p>
+
+    <div class="hero-line" aria-hidden="true"></div>
+  </section>
+
+  <!-- ---------- VERSE ---------- -->
+  <section class="quote" id="verse">
+    <div class="wrap reveal">
+      <p class="eyebrow">In The Name Of God</p>
+
+      <div class="quote-card">
+        <svg class="quote-mark" viewBox="0 0 48 34" fill="none" aria-hidden="true">
+          <path d="M0 34V20.4C0 9.2 5.4 1.8 15.2 0l2 4.6c-6 1.4-9 5-9.4 10.4H18V34H0Zm30 0V20.4C30 9.2 35.4 1.8 45.2 0l2 4.6c-6 1.4-9 5-9.4 10.4H48V34H30Z" fill="currentColor"/>
+        </svg>
+
+        <p class="quote-text">
+          &ldquo;Kasih itu sabar; kasih itu murah hati; ia tidak cemburu.
+          Ia tidak memegahkan diri dan tidak sombong. Ia tidak melakukan yang
+          tidak sopan dan tidak mencari keuntungan diri sendiri. Ia tidak
+          pemarah dan tidak menyimpan kesalahan orang lain. Ia tidak bersukacita
+          karena ketidakadilan, tetapi karena kebenaran. Ia menutupi segala
+          sesuatu, percaya segala sesuatu, mengharapkan segala sesuatu, sabar
+          menanggung segala sesuatu.&rdquo;
+        </p>
+        <p class="quote-source">1 Korintus 13 : 4 &ndash; 7</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- COUPLE ---------- -->
+  <section id="couple">
+    <div class="wrap reveal">
+      <p class="eyebrow">The Wedding Of</p>
+      <h2 class="section-title">Mempelai</h2>
+
+      <svg class="ornament" viewBox="0 0 160 22" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <path d="M2 11h52"/><path d="M106 11h52"/>
+        <path d="M80 3.5c3.6 3.3 8 4.5 11.6 4.5-3.6 0-8 1.2-11.6 4.5-3.6-3.3-8-4.5-11.6-4.5 3.6 0 8-1.2 11.6-4.5Z"/>
+        <circle cx="62" cy="11" r="1.8"/><circle cx="98" cy="11" r="1.8"/>
+      </svg>
+
+      <div class="couple-grid">
+        <div class="person">
+          <div class="person-photo" id="photoWoman">
+            <div class="ph-fallback">E</div>
+          </div>
+          <h3 class="person-name">Ellena Cornell Macaroon</h3>
+          <p class="person-role">Mempelai Wanita</p>
+        </div>
+
+        <div class="amp" aria-hidden="true">&amp;</div>
+
+        <div class="person">
+          <div class="person-photo" id="photoMan">
+            <div class="ph-fallback">A</div>
+          </div>
+          <h3 class="person-name">Aldente Santoro Danendra</h3>
+          <p class="person-role">Mempelai Pria</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- COUNTDOWN ---------- -->
+  <section class="countdown-sec" id="countdown">
+    <div class="wrap reveal">
+      <p class="eyebrow">Save The Date</p>
+      <h2 class="section-title">Menuju Hari Bahagia</h2>
+      <p class="section-sub">Sabtu, 19 September 2026 &middot; Kota Taman Main Roleplay</p>
+
+      <div class="countdown" id="countdownBox">
+        <div class="cd-item"><span class="cd-num" id="cdD">00</span><span class="cd-label">Hari</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdH">00</span><span class="cd-label">Jam</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdM">00</span><span class="cd-label">Menit</span></div>
+        <div class="cd-item"><span class="cd-num" id="cdS">00</span><span class="cd-label">Detik</span></div>
+      </div>
+
+      <p class="countdown-note" id="cdNote">Sampai jumpa di hari bahagia kami</p>
+    </div>
+  </section>
+
+  <!-- ---------- EVENTS ---------- -->
+  <section id="events">
+    <div class="wrap reveal">
+      <p class="eyebrow">Rangkaian Acara</p>
+      <h2 class="section-title">Waktu &amp; Tempat</h2>
+
+      <svg class="ornament small" viewBox="0 0 160 22" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <path d="M2 11h52"/><path d="M106 11h52"/>
+        <path d="M80 3.5c3.6 3.3 8 4.5 11.6 4.5-3.6 0-8 1.2-11.6 4.5-3.6-3.3-8-4.5-11.6-4.5 3.6 0 8-1.2 11.6-4.5Z"/>
+        <circle cx="62" cy="11" r="1.8"/><circle cx="98" cy="11" r="1.8"/>
+      </svg>
+    </div>
+
+    <div class="reveal">
+      <article class="event-card">
+        <div class="event-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"/>
+          </svg>
+        </div>
+        <h3 class="event-name">Pemberkatan Nikah</h3>
+        <p class="event-type">Holy Matrimony</p>
+
+        <p class="event-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          <strong>Sabtu, 19 September 2026</strong>
+        </p>
+        <p class="event-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          Pukul 09.00 WIB
+        </p>
+
+        <div class="event-divider"></div>
+
+        <p class="event-place">
+          Kota Taman Main Roleplay<br>
+          Jl. Vespuci Beach
+        </p>
+
+        <a class="btn ghost"
+           href="https://discord.gg/AhvRbRrSsq"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6-7-11a7 7 0 1 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+          </svg>
+          Lihat Lokasi
+        </a>
+      </article>
+    </div>
+
+    <div class="reveal">
+      <article class="event-card">
+        <div class="event-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 20h16"/><path d="M6 20V9a6 6 0 0 1 12 0v11"/><path d="M12 3v3"/>
+          </svg>
+        </div>
+        <h3 class="event-name">Resepsi</h3>
+        <p class="event-type">Wedding Reception</p>
+
+        <p class="event-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          <strong>Sabtu, 19 September 2026</strong>
+        </p>
+        <p class="event-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          Pukul 18.00 WIB
+        </p>
+
+        <div class="event-divider"></div>
+
+        <p class="event-place">
+          Kota Taman Main Roleplay<br>
+          Jl. Vespuci Beach
+        </p>
+
+        <a class="btn ghost"
+           href="https://discord.gg/AhvRbRrSsq"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6-7-11a7 7 0 1 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+          </svg>
+          Lihat Lokasi
+        </a>
+      </article>
+    </div>
+
+    <div class="wrap reveal" style="margin-top:1.6rem">
+      <a class="btn"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding+Ellena+%26+Aldente&amp;dates=20260919T020000Z/20260919T050000Z&amp;ctz=Asia/Jakarta&amp;details=Pemberkatan+Nikah+%26+Resepsi+Pernikahan+Ellena+%26+Aldente&amp;location=Kota+Taman+Main+Roleplay%2C+Jl.+Vespuci+Beach"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/></svg>
+        Simpan ke Kalender
+      </a>
+    </div>
+  </section>
+
+  <!-- ---------- LOVE STORY ---------- -->
+  <section id="story">
+    <div class="wrap reveal">
+      <p class="eyebrow">Our Love Story</p>
+      <h2 class="section-title">Perjalanan Kami</h2>
+
+      <svg class="ornament small" viewBox="0 0 160 22" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <path d="M2 11h52"/><path d="M106 11h52"/>
+        <path d="M80 3.5c3.6 3.3 8 4.5 11.6 4.5-3.6 0-8 1.2-11.6 4.5-3.6-3.3-8-4.5-11.6-4.5 3.6 0 8-1.2 11.6-4.5Z"/>
+        <circle cx="62" cy="11" r="1.8"/><circle cx="98" cy="11" r="1.8"/>
+      </svg>
+    </div>
+
+    <div class="story-list">
+      <div class="story-item reveal">
+        <span class="story-dot" aria-hidden="true"></span>
+        <h3 class="story-title">Awal Kisah</h3>
+        <p class="story-text">
+          Tidak pernah kami sangka, dua orang asing yang berjalan di kehidupan
+          masing-masing akan dipertemukan oleh semesta. Berawal dari perkenalan
+          sederhana, tumbuh percakapan yang tak pernah terasa membosankan. Hari
+          demi hari, tanpa disadari nama yang dulu biasa saja perlahan menjadi
+          doa yang selalu ingin disebutkan.
+        </p>
+      </div>
+
+      <div class="story-item reveal">
+        <span class="story-dot" aria-hidden="true"></span>
+        <h3 class="story-title">Saling Mendewasakan</h3>
+        <p class="story-text">
+          Perjalanan kami tidak selalu dihiasi tawa, ada ego yang harus
+          dipatahkan, ada air mata yang diam-diam jatuh, dan ada luka yang
+          mengajarkan arti bertahan. Kami belajar bahwa cinta bukan tentang
+          menemukan seseorang yang sempurna, melainkan tentang memilih untuk
+          tetap tinggal dengan kekurangan yang ada.
+        </p>
+      </div>
+
+      <div class="story-item reveal">
+        <span class="story-dot" aria-hidden="true"></span>
+        <h3 class="story-title">Awal Selamanya</h3>
+        <p class="story-text">
+          Hari ini dua doa dipersatukan dalam satu tujuan. Di hadapan Tuhan,
+          kami mengukir janji suci untuk memulai kehidupan baru. Pernikahan ini
+          bukanlah akhir, melainkan langkah awal menuju petualangan abadi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- GALLERY ---------- -->
+  <section id="gallery">
+    <div class="wrap reveal">
+      <p class="eyebrow">Our Moments</p>
+      <h2 class="section-title">Galeri</h2>
+      <p class="section-sub">Potongan cerita yang kami simpan rapi dalam kenangan.</p>
+    </div>
+
+    <div class="gallery" id="galleryGrid"></div>
+  </section>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="footer">
+    <p class="footer-names gold-text">Ellena &amp; Aldente</p>
+    <p class="footer-thanks">Terima kasih atas doa &amp; restunya</p>
+
+    <svg class="ornament" viewBox="0 0 160 22" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+      <path d="M2 11h52"/><path d="M106 11h52"/>
+      <path d="M80 3.5c3.6 3.3 8 4.5 11.6 4.5-3.6 0-8 1.2-11.6 4.5-3.6-3.3-8-4.5-11.6-4.5 3.6 0 8-1.2 11.6-4.5Z"/>
+      <circle cx="62" cy="11" r="1.8"/><circle cx="98" cy="11" r="1.8"/>
+    </svg>
+
+    <p class="footer-credit">Made with &hearts; &middot; Wolffo</p>
+  </footer>
+</main>
+
+<!-- ==========================================================
+     BOTTOM NAV
+     ========================================================== -->
+<nav class="nav" id="nav" aria-label="Navigasi undangan">
+  <a href="#home" data-nav>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+    Home
+  </a>
+  <a href="#couple" data-nav>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+    Mempelai
+  </a>
+  <a href="#events" data-nav>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+    Acara
+  </a>
+  <a href="#story" data-nav>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
+    Cerita
+  </a>
+  <a href="#gallery" data-nav>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m4 18 5-4 4 3 3-2 4 3"/></svg>
+    Galeri
+  </a>
+</nav>
+
+<div class="toast" id="toast">Tersalin!</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     ★★★  KONFIGURASI — UBAH HANYA BAGIAN INI  ★★★
+     ============================================================
+
+     ⚠️  PENTING UNTUK GITHUB PAGES ⚠️
+
+     1. SEMUA nama file WAJIB huruf kecil (lowercase).
+     2. JANGAN pakai spasi di nama file — pakai tanda hubung (-).
+     3. JANGAN pakai karakter: ( ) & # ? % + = @ $ , ; : ' "
+     4. Path di sini HARUS SAMA PERSIS dengan nama file asli.
+
+     ============================================================ */
+  var CONFIG = {
+
+    // ---- MUSIK (file MP3) ----
+    musik: "music/lagu.mp3",
+    volumeMusik: 0.5,
+
+    // ---- FOTO MEMPELAI ----
+    fotoWanita: "images/ellena.jpg",
+    fotoPria:   "images/aldente.jpg",
+
+    // ---- FOTO GALERI (5 SLOT) ----
+    galeri: [
+      "images/foto-1.jpg",
+      "images/foto-2.jpg",
+      "images/foto-3.jpg",
+      "images/foto-4.jpg",
+      "images/foto-5.jpg"
+    ]
+  };
+  /* ============================================================
+     ★★★  SELESAI — BAGIAN DI BAWAH TIDAK PERLU DIUBAH  ★★★
+     ============================================================ */
+
+
+  /* ---------- 1. SETUP AUDIO ---------- */
+  var bgm = document.getElementById('bgm');
+
+  if (CONFIG.musik) {
+    bgm.setAttribute('src', CONFIG.musik);
+    bgm.setAttribute('preload', 'auto');
+    bgm.volume = CONFIG.volumeMusik;
+    bgm.load();
+  }
+
+
+  /* ---------- 2. NAMA TAMU DARI URL (?to=Nama+Tamu) ---------- */
+  function getGuest() {
+    var params = new URLSearchParams(window.location.search);
+    var raw = params.get('to') || params.get('nama') || params.get('kepada');
+    if (!raw) return 'Tamu Undangan';
+    try { raw = decodeURIComponent(raw.replace(/\+/g, ' ')); }
+    catch (e) { raw = raw.replace(/\+/g, ' '); }
+    raw = raw.trim().replace(/\s+/g, ' ');
+    return raw || 'Tamu Undangan';
+  }
+  var GUEST = getGuest();
+  document.getElementById('guestName').textContent = GUEST;
+  document.title = 'Undangan Pernikahan — ' + GUEST;
+
+
+  /* ---------- 3. GOLD PARTICLES ---------- */
+  (function buildParticles() {
+    var layer = document.getElementById('coverParticles');
+    if (!layer) return;
+
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    var TOTAL = 22;
+    var frag = document.createDocumentFragment();
+
+    for (var i = 0; i < TOTAL; i++) {
+      var p = document.createElement('i');
+      p.style.left = (Math.random() * 100) + '%';
+      var sz = (2 + Math.random() * 3);
+      p.style.width  = sz + 'px';
+      p.style.height = sz + 'px';
+      var dur = 9 + Math.random() * 10;
+      p.style.animationDuration = dur + 's';
+      p.style.animationDelay = (-Math.random() * dur) + 's';
+      p.style.opacity = (0.35 + Math.random() * 0.55).toFixed(2);
+      frag.appendChild(p);
+    }
+    layer.appendChild(frag);
+  })();
+
+
+  /* ---------- 4. TOAST ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer;
+
+  function showToast(msg) {
+    toast.textContent = msg || 'Tersalin!';
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2400);
+  }
+
+
+  /* ---------- 5. FOTO MEMPELAI ---------- */
+  function fillCouplePhoto(boxId, src) {
+    var box = document.getElementById(boxId);
+    if (!box || !src) return;
+    var img = document.createElement('img');
+    img.alt = '';
+    img.onerror = function () { img.remove(); };
+    img.src = src;
+    box.appendChild(img);
+  }
+  fillCouplePhoto('photoWoman', CONFIG.fotoWanita);
+  fillCouplePhoto('photoMan',   CONFIG.fotoPria);
+
+
+  /* ---------- 6. GALERI ---------- */
+  (function buildGallery() {
+    var grid = document.getElementById('galleryGrid');
+    if (!grid) return;
+
+    function pad2(n) { return n < 10 ? '0' + n : String(n); }
+    var list = (CONFIG.galeri && CONFIG.galeri.length) ? CONFIG.galeri : [null, null, null, null, null];
+
+    list.forEach(function (src, i) {
+      var fig = document.createElement('figure');
+      fig.className = 'g-item reveal';
+
+      if (src) {
+        var img = document.createElement('img');
+        img.alt = 'Foto ' + (i + 1);
+        img.loading = 'lazy';
+        img.onerror = function () {
+          img.remove();
+          fig.classList.add('empty');
+          fig.innerHTML = '<span>' + pad2(i + 1) + '</span>';
+        };
+        img.src = src;
+        fig.appendChild(img);
+      } else {
+        fig.classList.add('empty');
+        fig.innerHTML = '<span>' + pad2(i + 1) + '</span>';
+      }
+      grid.appendChild(fig);
+    });
+  })();
+
+
+  /* ---------- 7. MUSIC PLAYBACK ---------- */
+  var musicBtn    = document.getElementById('musicBtn');
+  var musicStatus = document.getElementById('musicStatus');
+  var musicFailed = false;
+
+  if (!CONFIG.musik) {
+    musicFailed = true;
+    musicStatus.textContent = 'Musik belum ditambahkan';
+    musicStatus.classList.add('show');
+    musicBtn.classList.add('paused');
+  } else {
+    bgm.addEventListener('error', function () {
+      musicFailed = true;
+      musicStatus.textContent = 'Musik tidak dapat dimuat';
+      musicStatus.classList.add('show');
+      musicBtn.classList.add('paused');
+    });
+  }
+
+  function playMusicNow() {
+    if (!CONFIG.musik || musicFailed) return Promise.resolve(false);
+
+    if (!bgm.getAttribute('src')) {
+      bgm.setAttribute('src', CONFIG.musik);
+      bgm.load();
+    }
+
+    var p = bgm.play();
+
+    if (!p || !p.then) {
+      musicBtn.classList.remove('paused');
+      updateMusicStatus(true);
+      return Promise.resolve(true);
+    }
+
+    return p.then(function () {
+      musicBtn.classList.remove('paused');
+      updateMusicStatus(true);
+      return true;
+    }).catch(function (err) {
+      musicBtn.classList.add('paused');
+      updateMusicStatus(false, err);
+      return false;
+    });
+  }
+
+  function updateMusicStatus(ok, err) {
+    if (ok) {
+      musicStatus.textContent = '♪ Musik sedang diputar';
+      musicStatus.classList.add('show', 'ok');
+    } else {
+      var reason = 'Ketuk tombol musik untuk memutar';
+      if (err && err.name === 'NotSupportedError') {
+        reason = 'Format musik tidak didukung';
+      } else if (musicFailed) {
+        reason = 'Musik tidak dapat dimuat';
+      }
+      musicStatus.textContent = reason;
+      musicStatus.classList.add('show');
+      musicStatus.classList.remove('ok');
+    }
+  }
+
+  musicBtn.addEventListener('click', function () {
+    if (!CONFIG.musik) {
+      showToast('Musik belum ditambahkan');
+      return;
+    }
+    if (bgm.paused) {
+      playMusicNow();
+    } else {
+      bgm.pause();
+      musicBtn.classList.add('paused');
+      updateMusicStatus(false);
+    }
+  });
+
+
+  /* ---------- 8. BUKA UNDANGAN ---------- */
+  var cover    = document.getElementById('cover');
+  var main     = document.getElementById('main');
+  var openBtn  = document.getElementById('openBtn');
+  var nav      = document.getElementById('nav');
+  var opened   = false;
+
+  function openInvitation() {
+    if (opened) return;
+    opened = true;
+
+    playMusicNow();
+
+    openBtn.style.pointerEvents = 'none';
+    window.scrollTo(0, 0);
+
+    cover.classList.add('hidden');
+    document.body.classList.remove('locked');
+    main.classList.add('visible');
+    musicBtn.classList.add('show');
+    nav.classList.add('show');
+
+    setTimeout(function () {
+      cover.style.display = 'none';
+      cover.setAttribute('aria-hidden', 'true');
+    }, 1600);
+
+    setTimeout(initReveal, 800);
+    setTimeout(scrollToHashIfAny, 2400);
+  }
+  openBtn.addEventListener('click', openInvitation);
+
+  function scrollToHashIfAny() {
+    if (!window.location.hash) return;
+    var el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+
+  /* ---------- 9. COUNTDOWN ---------- */
+  var TARGET  = new Date('2026-09-19T09:00:00+07:00').getTime();
+  var elD     = document.getElementById('cdD');
+  var elH     = document.getElementById('cdH');
+  var elM     = document.getElementById('cdM');
+  var elS     = document.getElementById('cdS');
+  var cdNote  = document.getElementById('cdNote');
+
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function setNum(el, val) {
+    if (el.textContent === val) return;
+    el.textContent = val;
+    el.classList.remove('tick');
+    void el.offsetWidth;
+    el.classList.add('tick');
+  }
+
+  function tick() {
+    var diff = TARGET - Date.now();
+    if (diff <= 0) {
+      setNum(elD, '00'); setNum(elH, '00'); setNum(elM, '00'); setNum(elS, '00');
+      cdNote.textContent = 'Hari ini hari bahagia kami — terima kasih sudah hadir';
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    setNum(elD, pad(Math.floor(s / 86400)));
+    setNum(elH, pad(Math.floor((s % 86400) / 3600)));
+    setNum(elM, pad(Math.floor((s % 3600) / 60)));
+    setNum(elS, pad(s % 60));
+  }
+  tick();
+  setInterval(tick, 1000);
+
+
+  /* ---------- 10. SCROLL PROGRESS ---------- */
+  var progress = document.getElementById('scrollProgress');
+
+  function updateProgress() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    var pct = max > 0 ? ((doc.scrollTop || window.scrollY) / max) * 100 : 0;
+    progress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive:true });
+  window.addEventListener('resize', updateProgress, { passive:true });
+  updateProgress();
+
+
+  /* ---------- 11. REVEAL ON SCROLL ---------- */
+  var revealDone = false;
+
+  function initReveal() {
+    if (revealDone) return;
+    revealDone = true;
+
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (i) { i.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    items.forEach(function (i) { io.observe(i); });
+  }
+
+
+  /* ---------- 12. NAVIGASI BAWAH ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+  var sections = navLinks
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  navLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', a.getAttribute('href'));
+    });
+  });
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var navIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { threshold: 0.25, rootMargin: '-20% 0px -50% 0px' });
+    sections.forEach(function (s) { navIO.observe(s); });
+  }
+
+
+  /* ---------- 13. GOLD GLOW ---------- */
+  function attachGoldGlow(selector) {
+    document.querySelectorAll(selector).forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var x = ((e.clientX - r.left) / r.width) * 100;
+        var y = ((e.clientY - r.top) / r.height) * 100;
+        card.style.background =
+          'radial-gradient(circle at ' + x + '% ' + y + '%, rgba(212,175,55,.12), transparent 55%), ' +
+          'linear-gradient(165deg, rgba(26,26,26,.92), rgba(14,14,14,.92))';
+      });
+      card.addEventListener('pointerleave', function () {
+        card.style.background = '';
+      });
+    });
+  }
+  attachGoldGlow('.event-card');
+  attachGoldGlow('.quote-card');
+
+  window.addEventListener('load', function () {
+    setTimeout(updateProgress, 300);
+  });
+
+})();
+</script>
+</body>
+</html>
